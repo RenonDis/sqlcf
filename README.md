@@ -1,4 +1,4 @@
 # sqlcf
-The subtile merging of snc
-kjk
-kjk
+<<<<<<< HEAD
+The subtile merging of sncf and sql lkl
+=======
