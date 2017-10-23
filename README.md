@@ -1,3 +1,2 @@
 # sqlcf
-The sezubtile merging of snc
-kjk
+The subtle merging of sncf and sql
