@@ -1,3 +1,3 @@
 # sqlcf
-The subtile merging of snc
+The sezubtile merging of snc
 kjk
