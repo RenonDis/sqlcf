@@ -1,7 +1,7 @@
 # sqlcf
 The subtle merging of sncf and sql
 
-sql design : https:/sqldbm.com//Project/Share/EJePP5Q-HqOJzN0dG-JjPg
+sql design : https://sqldbm.com/Project/Share/EJePP5Q-HqOJzN0dG-JjPg/
 
 php sql : https://zestedesavoir.com/tutoriels/351/paginer-avec-php-et-mysql/
 
