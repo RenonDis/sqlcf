@@ -21,6 +21,18 @@ train_numero int, foreign key (train_numero) references train(numero),
 primary key(numero, voiture_numero, train_numero) );
 */
 
+create table reduction (
+reduction_type char(15) primary key, 
+pourcentage float);
+
+create table client_sncf (
+nom char(15), 
+prenom char(15), 
+majeur bool, 
+reduction_type char(15), 
+id int primary key, 
+foreign key (reduction_type) references reduction(reduction_type) );
+
 create table billet( 
 numero int primary key, 
 id_client int, foreign key (id_client) references client_sncf(id),
@@ -37,18 +49,8 @@ date_arrivee date,
 heure_arrivee time,
 prix float);
  
-create table reduction (
-reduction_type char(15) primary key, 
-pourcentage float);
-
-create table client_sncf (
-nom char(15), 
-prenom char(15), 
-majeur bool, 
-reduction_type char(15), 
-id int primary key, 
-foreign key (reduction_type) references reduction(reduction_type) );
-
+##########   Création Admin   ##########
+grant all privileges on sncf.* to sncfadmin@'localhost' identified by 'mypassword';
 
 ##########   Remplissage BD   ##########
 
