@@ -97,7 +97,7 @@ insert into billet () values ( 2, 3, 21, 2, 2, 'Valence', 'Valence-Ville', 'Lyon
 insert into billet () values ( 3, 4, 13, 1, 3, 'Macon', 'Macon-Gare', 'Paris', 'Gare de Lyon', '2018-01-25', '12:34:00', '2018-01-25', '14:45:00', 52.0);
 insert into billet () values ( 4, 5, 42, 1, 4, 'Toulouse', 'Gare Toulouse', 'Biarritz', 'Gare du Soleil', '2018-02-13', '5:25:00', '2018-02-13', '6:30:00', 35.0);
 insert into billet () values ( 5, 6, 53, 2, 5, 'Nancy', 'Gare Nancy', 'Metz', 'Gare Metz', '2018-05-02', '13:00:00', '2018-05-02', '13:40:00', 15.0);
-
+insert into billet () values ( 6, 2, 22, 2, 5, 'Nancy', 'Gare Nancy', 'Metz', 'Gare Metz', '2018-05-02', '13:00:00', '2018-05-02', '13:40:00', 15.0);
 
 
 ##########   Create Views   ##########
@@ -153,6 +153,16 @@ voiture.numero as 'n° voiture',
 (select count(*) from billet where billet.numero_train = train.numero and billet.numero_voiture = voiture.numero) as 'nb places reservées'
 from train, voiture
 where train.numero = voiture.numero_train;
+
+# n° train | nb voitures | nb total places restantes
+#create view as places_restantes
+select train.numero as 'n° train',
+(select count(*) from voiture where voiture.numero_train = train.numero) as 'nombre voitures',
+(select (select sum(voiture.places_dispo) 
+				from voiture 
+				where voiture.numero_train = train.numero)
+		- count(*) from billet where billet.numero_train = train.numero) as 'nb places restantes'
+from train;
 
 
 ##########   Triggers   ##########
