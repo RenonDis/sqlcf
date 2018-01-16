@@ -9,14 +9,14 @@ Nous voulons faire la gestion d’une agence de voyage SNCF. Un billet de
 voyage est identifié par cette agence, par son numéro et se caractérise également
 par :
 
-– La ville de destination
-– La gare de départ
-– La date de départ
-– L’heure de départ
-– La gare d’arrivée
-– La date d’arrivée
-– L’heure d’arrivée
-– Le prix du billet
+* La ville de destination
+* La gare de départ
+* La date de départ
+* L’heure de départ
+* La gare d’arrivée
+* La date d’arrivée
+* L’heure d’arrivée
+* Le prix du billet
 
 Le billet va être utilisé dans un train identifié par son numéro et comporte
 plusieurs voitures. Une voiture est identifiée par son numéro et le nombre de
