@@ -9,8 +9,7 @@ numero integer primary key);
 create table voiture ( 
 numero int, 
 places_dispo int, 
-numero_train int, 
-foreign key (numero_train) references train(numero),
+numero_train int, foreign key (numero_train) references train(numero),
 primary key (numero, numero_train) );
 
 /*
@@ -24,7 +23,7 @@ primary key(numero, voiture_numero, train_numero) );
 
 create table billet( 
 numero int primary key, 
-id_client int,
+id_client int, foreign key (id_client) references client_sncf(id),
 numero_place int,
 numero_voiture int, foreign key (numero_voiture) references voiture(numero),
 numero_train int, foreign key (numero_train) references train(numero),
