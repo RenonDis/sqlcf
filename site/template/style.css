@@ -222,6 +222,10 @@
 	    padding:0.5em 0; 
 	    margin-left:1em;
 	    }
+        
+        p       {
+            margin-left:4em;
+            }
 	    
 	h1,
 	section.intro div.summary p,
@@ -421,6 +425,22 @@ td, th {
     text-align: center;
     padding: 7px;
 }
+
+.tableform td {
+    min-width:20vw;
+    }
+
+.tableform td:first-child {
+    text-align:right;
+    }
+
+.tableform td:last-child {
+    text-align:left;
+    }
+
+.tableform button {
+    min-width:40vw;
+    }
 
 thead th:first-of-type {
     border-top-left-radius: var(--table-radius);

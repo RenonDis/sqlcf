@@ -6,7 +6,7 @@
     <tr>
         <td> Numéro du train </td>
         <td> Nombre de voitures </td>
-        <td> Nombre de places disponibles </td>
+        <td> Nombre de places restantes </td>
     </tr>
     <?php getDispoTrains();?>
 </table>

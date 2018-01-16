@@ -2,7 +2,7 @@
 <h3>Plus d'information ?</h3>
 
 <p>
-    Veuillez consulter le site de la <a href="www.sncf.com">SNCF</a> pour de plus amples informations sur tous vos trajets !
+    Veuillez consulter le site de la <a href="http://www.sncf.com">SNCF</a> pour de plus amples informations sur tous vos trajets !
 </p>
 
 <h3>Une remarque sur l'application ?</h3>

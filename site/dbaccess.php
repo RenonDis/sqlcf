@@ -5,12 +5,14 @@ function getDispoTrains() {
     $cnx = new PDO('mysql:host=localhost;dbname=sncf;charset=utf8', 'sncfadmin', 'admin');
 
     // Partie "Requête"
-    $query = 'SELECT * FROM `diponibilitestrain`';
+    $query = 'SELECT * FROM `placesrestantes`';
     $resultSet = $cnx->query($query);
     
     // Partie "Boucle"
     while ($element = $resultSet->fetch()) {
-            echo "<tr><td>" . $element['n° train'] . "</td><td>" . $element['nombre voitures'] . "</td><td>" . $element['places total dispo'] . "</td></tr>";
+            echo "<tr><td>" . $element['n° train'] . "</td>
+                <td>" . $element['nombre voitures'] . "</td>
+                <td>" . $element['nb places restantes'] . "</td></tr>";
                 }
     }
 
