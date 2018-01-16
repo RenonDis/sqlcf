@@ -164,5 +164,22 @@ select train.numero as 'n° train',
 		- count(*) from billet where billet.numero_train = train.numero) as 'nb places restantes'
 from train;
 
+# date depart | heure depart | ville depart
+create view prochains_departs as
+select billet.date_depart, 
+billet.heure_depart, 
+billet.ville_depart
+from billet
+where ( curdate() < billet.date_depart or (curdate() = billet.date_depart and curtime() < billet.heure_depart));
+
+# n° train | gare départ | gare d'arrivée | heure départ
+create view train_infos as
+select distinct train.numero, billet.gare_depart, billet.gare_arrivee, billet.heure_depart
+from train, billet
+where billet.numero_train = train.numero;
+
+
+
+
 
 ##########   Triggers   ##########
