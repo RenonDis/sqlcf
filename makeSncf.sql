@@ -102,6 +102,7 @@ insert into billet () values ( 5, 6, 53, 2, 5, 'Nancy', 'Gare Nancy', 'Metz', 'G
 
 ##########   Create Views   ##########
 # n° train | n° voiture | places dispo (reservées ou non)
+create view diponibilites-voit as
 select train.numero as 'n° train', 
 voiture.numero as 'n° voiture', 
 voiture.places_dispo 
@@ -109,6 +110,7 @@ from train, voiture
 where voiture.numero_train = train.numero;
 
 # client prenom | client nom | type reduction | taux de reduction
+create view clientreduc as
 select client_sncf.prenom, 
 client_sncf.nom, 
 reduction.reduction_type, 
@@ -117,6 +119,7 @@ from client_sncf, reduction
 where reduction.reduction_type = client_sncf.reduction_type;
 
 # billet n° | ville depart | ville arrivee | heure depart | date depart | n° train
+create view listbillet as
 select billet.numero as 'n° billet', 
 billet.ville_depart, 
 billet.ville_arrivee, 
@@ -127,12 +130,14 @@ from billet, train
 where billet.numero_train = train.numero;
 
 # n° train | nb voitures | nb total de places dispo (reservées ou non)
+create view diponibilites-train as
 select train.numero as 'n° train',
 (select count(*) from voiture where voiture.numero_train = train.numero) as 'nombre voitures',
 (select sum(voiture.places_dispo) from voiture where voiture.numero_train = train.numero) as 'places total dispo'
 from train;
 
 # train n° | voiture n° | n° place reservée | côté fenêtre
+create view cotefen as
 select train.numero as 'n° train',
 voiture.numero as 'n° voiture',
 billet.numero_place as 'n° place reservée',
@@ -142,6 +147,7 @@ where billet.numero_train = train.numero and billet.numero_voiture = voiture.num
 
 
 # train n° | voiture n° | nb places reservées
+create view voit-reserv as
 select train.numero as 'n° train',
 voiture.numero as 'n° voiture',
 (select count(*) from billet where billet.numero_train = train.numero and billet.numero_voiture = voiture.numero) as 'nb places reservées'
