@@ -12,7 +12,6 @@ function config($key = '')
         'nav_menu' => [
             'accueil' => 'Accueil',
             'billets' => 'Billets',
-            'products' => 'Products',
             'contact' => 'Contact',
         ],
         'template_path' => 'template',

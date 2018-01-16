@@ -155,7 +155,7 @@ from train, voiture
 where train.numero = voiture.numero_train;
 
 # n° train | nb voitures | nb total places restantes
-#create view as places_restantes
+create view placesrestantes as
 select train.numero as 'n° train',
 (select count(*) from voiture where voiture.numero_train = train.numero) as 'nombre voitures',
 (select (select sum(voiture.places_dispo) 
