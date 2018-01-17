@@ -552,7 +552,6 @@ ul {
 .button, .buttonpdf {
     background-color:#202099;
     background-color: var(--color1);
-    background-image:url(titlebg.png); 
     background-size: cover;
     border: 1px solid #202099;
     border: 1px solid var(--color1);
