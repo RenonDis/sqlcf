@@ -212,6 +212,11 @@
 	    border-color: #202099;
 	    border-color: var(--color1);
 	    }
+        
+        h1 a {
+            color:white;
+            border-bottom:0px;
+            }
 	
 	section.intro div.summary p a,
 	div.explanation p a,

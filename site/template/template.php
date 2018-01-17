@@ -10,7 +10,7 @@
 
     <header>
         
-        <h1><?php siteName(); ?></h1>
+        <h1><a href="?page=accueil"><?php siteName(); ?></a></h1>
             <nav class="menu">
                 <?php navMenu(); ?>
             </nav>
