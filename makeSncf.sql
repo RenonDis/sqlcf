@@ -42,7 +42,8 @@ id int unique,
 id_client int, foreign key (id_client) references client_sncf(id),
 id_trajet int, foreign key (id_trajet) references trajet(id),
 numero_place int,
-numero_voiture int, foreign key (numero_voiture) references voiture(numero));
+numero_voiture int, foreign key (numero_voiture) references voiture(numero),
+prix_reduit float);
 
 # table à supprimer
 /*
@@ -117,12 +118,12 @@ insert into trajet () values ( 5, 5, 'Macon', 'Macon-Gare', 'Lyon', 'Part-Dieu',
 insert into trajet () values ( 6, 6, 'Macon', 'Macon-Gare', 'Valence', 'Valence-Ville', '2018-01-28', '12:34:00', '2018-01-28', '14:45:00', 52.0);
 
 # reservation
-insert into reservation () values (1, 2, 1, 10, 2);
-insert into reservation () values (2, 3, 2, 21, 2);
-insert into reservation () values (3, 1, 3, 13, 1);
-insert into reservation () values (4, 4, 4, 48, 2);
-insert into reservation () values (5, 3, 5, 9, 2);
-insert into reservation () values (6, 5, 6, 16, 1);
+insert into reservation () values (1, 2, 1, 10, 2, 7.5);
+insert into reservation () values (2, 3, 2, 21, 2, 18.75);
+insert into reservation () values (3, 1, 3, 13, 1, 15.0);
+insert into reservation () values (4, 4, 4, 48, 2, 25.68);
+insert into reservation () values (5, 3, 5, 9, 2, 18.75);
+insert into reservation () values (6, 5, 6, 16, 1, 31.2);
 
 ##########   Create Views   ##########
 
