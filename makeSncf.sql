@@ -212,13 +212,19 @@ from train;
 create view prochains_departs as
 select trajet.date_depart, 
 trajet.heure_depart, 
-trajet.ville_depart
+trajet.ville_depart,
+trajet.ville_arrivee
 from trajet
 where ( curdate() < trajet.date_depart or (curdate() = trajet.date_depart and curtime() < trajet.heure_depart));
 
-# n° train | gare départ | gare d'arrivée | date départ | heure départ
+# n° train | gare départ | gare arrivée | date départ | heure départ
 create view train_infos as
-select distinct train.numero, trajet.gare_depart, trajet.gare_arrivee, trajet.date_depart, trajet.heure_depart
+select distinct     train.numero, 
+                    trajet.gare_depart, 
+                    trajet.gare_arrivee, 
+                    trajet.date_depart, 
+                    trajet.heure_depart,
+                    trajet.heure_arrivee
 from train, trajet
 where trajet.numero_train = train.numero;
 

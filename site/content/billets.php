@@ -76,6 +76,18 @@
                     </select>
                 </td>
             </tr>
+            <tr>
+                <td>Réduction</td>
+                <td>
+                    <select id="reduction">
+                        <option>Decouverte</option>
+                        <option>Jeune</option>
+                        <option>J-30</option>
+                        <option>J-8</option>
+                        <option>-50%</option>
+                    </select>
+                </td>
+            </tr>
 
             <tr>
                 <td colspan=2>
