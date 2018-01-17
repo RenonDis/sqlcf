@@ -96,6 +96,12 @@
 
         .flexo table   {
             }
+
+        .error {
+            padding:1em;
+            border: 1px solid red;
+            color:red;
+            }
 	    
 	::selection { 
 	    background: #606060;
