@@ -25,7 +25,11 @@ Le site est composé de plusieurs onglets, avec différents rôles :
 ## Billets
 
 * Réservation des billets
-** sasasa
+<ul>
+<li>Indiquer Nom, Prénom, Trajet, Voiture (~ classe), Réduction et Majeur/Mineur</li>
+<li>Une page de confirmation donne les informations de votre trajet. Confirmez !</li>
+<li>Une page récapitulative s'affiche, avec votre ID client, à conserver pour *Mes Réservations* !<li>
+</ul>
 
 * Aperçu des billets déjà réservés (anonymisés : sans l'ID client associé)
 
