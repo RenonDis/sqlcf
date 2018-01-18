@@ -15,7 +15,7 @@ function getDispoTrains() {
     }
 
     // Partie "Requête"
-    $query = 'SELECT * FROM `placesrestantes`';
+    $query = 'SELECT * FROM `places_restantes_par_train`';
     $resultSet = $cnx->query($query);
     
     // Partie "Boucle"
@@ -42,12 +42,14 @@ function getReservTrains() {
     }
 
     // Partie "Requête"
-    $query = 'SELECT * FROM `voit_reserv`';
+    $query = 'SELECT * FROM `places_reservees_voiture`';
     $resultSet = $cnx->query($query);
     
     // Partie "Boucle"
     while ($element = $resultSet->fetch()) {
-            echo "<tr><td>" . $element['n° train'] . "</td><td>" . $element['n° voiture'] . "</td><td>" . $element['nb places reservées'] . "</td></tr>";
+            echo "<tr><td>" . $element['n° train'] . "</td>
+                <td>" . $element['n° voiture'] . "</td>
+                <td>" . $element['nb places reservées'] . "</td></tr>";
                 }
     }
 
@@ -67,7 +69,7 @@ function getBilletListe() {
     }
 
     // Partie "Requête"
-    $query = 'SELECT * FROM `listbillet`';
+    $query = 'SELECT * FROM `liste_billets`';
     $resultSet = $cnx->query($query);
     
     // Partie "Boucle"
@@ -110,34 +112,6 @@ function getTrajets() {
                 }
     }
 
-function getProchainsDeparts() {
-
-    try {
-    $cnx = new PDO('mysql:host='.config('host').';
-        dbname='.config('database').';charset=utf8',
-        config('user'), 
-        config('passit'));
-
-    } catch(Exception $e) {
-
-    die('Erreur :'.$e->getMessage());
-
-    }
-
-    // Partie "Requête"
-    $query = 'SELECT * FROM `train_infos`';
-    $resultSet = $cnx->query($query);
-    
-    // Partie "Boucle"
-    while ($element = $resultSet->fetch()) {
-            echo "<tr><td>" . $element['numero'] . "</td>
-                <td>" . $element['gare_depart'] . "</td>
-                <td>" . $element['gare_arrivee'] . "</td>
-                <td>" . $element['date_depart'] . "</td>
-                <td>" . $element['heure_depart'] . "</td>
-                <td>" . $element['heure_arrivee'] . "</td></tr>";
-                }
-    }
 
 function getResa() {
 

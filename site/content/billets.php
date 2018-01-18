@@ -1,6 +1,3 @@
-<?php session_start() ?>
-
-
 <h3>Réserver un billet</h3>
 
 <div class="flexo">
@@ -86,7 +83,12 @@
                         <option>J-8</option>
                         <option>-50%</option>
                     </select>
+                    <select id="majorite" name="majorite">
+                        <option value="true">Majeur</option>
+                        <option value="false">Mineur</option>
+                    </select>
                 </td>
+                
             </tr>
 
             <tr>

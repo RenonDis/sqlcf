@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php session_start();
+if (!$_SESSION['isclean']) {
+	$_SESSION['infores'] = '';
+	$_SESSION['errorsres'] = '';
+	$_SESSION['infobil'] = '';
+	$_SESSION['errorsbil'] = '';
+	$_SESSION['info'] = '';
+	$_SESSION['errors'] = '';
+} else {
+	$_SESSION['isclean'] = false;
+}
+?>
+
 <html>
 <head>
     <meta charset="utf-8" />
