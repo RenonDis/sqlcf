@@ -49,6 +49,7 @@ function pageTitle()
  */
 function pageContent()
 {
+
     $page = isset($_GET['page']) ? $_GET['page'] : 'accueil';
 
     $path = getcwd().'/'.config('content_path').'/'.$page.'.php';
