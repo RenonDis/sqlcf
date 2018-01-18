@@ -13,9 +13,9 @@ L'application est à destination des voyageurs cherchant à réserver un voyage 
 Le site est composé de plusieurs onglets, avec différents rôles :
 
 * Accueil 
-* Billets : réservation des billets et aperçu des réservations effectuées;
-* Informations : informations générales (réductions,..);
-* Mes Réservations : rechercher une ou plusieurs réservation à l'aide d'un ID client;
+* Billets 
+* Informations
+* Mes Réservations 
 
 ## Accueil
 
@@ -29,7 +29,7 @@ Le site est composé de plusieurs onglets, avec différents rôles :
 <ul>
 <li>Indiquer Nom, Prénom, Trajet, Voiture (~ classe), Réduction et Majeur/Mineur</li>
 <li>Une page de confirmation donne les informations de votre trajet. Confirmez !</li>
-<li>Une page récapitulative s'affiche, avec votre ID client, à conserver pour *Mes Réservations* !</li>
+<li>Une page récapitulative s'affiche, avec votre ID client, à conserver pour <em>Mes Réservations</em> !</li>
 </ul>
 </li>
 </ul>
@@ -44,7 +44,7 @@ Le site est composé de plusieurs onglets, avec différents rôles :
 
 * En rentrant un ID client (fourni lors de la réservation), on peut y retrouver les billets réservés
 
-# Contact
+## Contact
 
 * Contactez-nous !
 
