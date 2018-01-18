@@ -12,12 +12,6 @@ function confirmTrajet() {
         $place = (int) $_SESSION['infores'][2];
         $reduction = $_SESSION['infores'][4];
         $voiture = (int) $_SESSION['infores'][5];
-
-        error_log((string) $idclient);
-        error_log((string) $idtrajet);
-        error_log((string) $place);
-        error_log((string) $reduction);
-        error_log((string) $voiture);
     
         try {
         $cnx = new PDO('mysql:host='.config('host').';
