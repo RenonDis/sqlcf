@@ -51,7 +51,7 @@ grant all privileges on sncf.* to sncfadmin@'localhost' identified by 'mypasswor
 ##########   Remplissage BD   ##########
 
 # reduction
-insert into reduction () values ('', 0);
+insert into reduction () values ('Aucune', 0);
 insert into reduction () values ('J-8', 0.25);
 insert into reduction () values ('J-30', 0.35);
 insert into reduction () values ('Decouverte', 0.4);
