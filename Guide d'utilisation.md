@@ -40,7 +40,7 @@ Le site est composé de plusieurs onglets, avec différents rôles :
 
 * Informations générales sur les réductions
 
-## Mes Réservation
+## Mes Réservations
 
 * En rentrant un ID client (fourni lors de la réservation), on peut y retrouver les billets réservés
 
