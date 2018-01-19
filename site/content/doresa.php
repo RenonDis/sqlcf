@@ -13,11 +13,11 @@ function confirmTrajet() {
         $reduction = $_SESSION['infores'][4];
         $voiture = (int) $_SESSION['infores'][5];
         
-        error_log((string) $idclient);
         error_log((string) $idtrajet);
-        error_log((string) $place);
+        error_log((string) $idclient);
         error_log((string) $reduction);
         error_log((string) $voiture);
+        error_log((string) $place);
     
         try {
         $cnx = new PDO('mysql:host='.config('host').';
@@ -42,7 +42,7 @@ function confirmTrajet() {
         $reqTrajet->bindValue(':idclient', $idclient, PDO::PARAM_INT);
         $reqTrajet->bindValue(':reduction', $reduction, PDO::PARAM_STR);
         $reqTrajet->bindValue(':voiture', $voiture, PDO::PARAM_INT);
-        $reqTrajet->bindValue(':place', $place, PDO::PARAM_BOOL);
+        $reqTrajet->bindValue(':place', $place, PDO::PARAM_INT);
     
 
         try {
@@ -56,9 +56,9 @@ function confirmTrajet() {
         
         $reqTrajet->closeCursor();
 
-        #$row = $cnx->query("SELECT @idresa AS idresa")->fetch(PDO::FETCH_ASSOC);
+        $rowi = $cnx->query("SELECT @idresa AS idresa")->fetch(PDO::FETCH_ASSOC);
 
-	#error_log((string) $row['idresa']);
+	error_log((string) $rowi['idresa']);
 
         $_SESSION['isclean'] = true;
         header('Location: /?page=merci');
