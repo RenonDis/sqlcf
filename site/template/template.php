@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php session_start();
+if (isset($_SESSION['isclean'])) {
 if (!$_SESSION['isclean']) {
 	$_SESSION['infores'] = '';
 	$_SESSION['errorsres'] = '';
@@ -9,7 +10,7 @@ if (!$_SESSION['isclean']) {
 	$_SESSION['errors'] = '';
 } else {
 	$_SESSION['isclean'] = false;
-}
+}}
 ?>
 
 <html>

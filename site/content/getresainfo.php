@@ -4,6 +4,7 @@ session_start();
 $_SESSION['info'] = [];
 $_SESSION['errors'] = [];
 
+# Chercher une réservation à l'aide d'un ID client
 function findId() {
 
         $idclient = 0;

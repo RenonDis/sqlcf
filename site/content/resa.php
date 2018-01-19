@@ -28,7 +28,11 @@
 
 <h3>Liste de mes réservations</h3>
 
-<p> Nombre de billets trouvés : <?php echo sizeof($arraybill); ?> </p>
+<p> Nombre de billets trouvés : 
+
+<?php if (isset($arraybill)): ?>
+
+<?php echo sizeof($arraybill); ?> </p>
 <?php foreach($arraybill as $key=>$infobill): ?>
 
 <div class="flexo">
@@ -53,4 +57,9 @@
 </div>
 
 <?php endforeach; ?>
+<?php else: ?>
+0 </p>
+<?php endif; ?>
+
+
 <?php endif; ?> 
