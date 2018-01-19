@@ -120,6 +120,8 @@ function findId() {
                             $element['heure_arrivee']);
 		}
 
+                $reqId->closeCursor();
+
 
                 if(!empty($arrayresa)) {
 	            $_SESSION['infores'] = $arrayresa;

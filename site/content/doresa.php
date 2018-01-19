@@ -38,13 +38,22 @@ function confirmTrajet() {
             :place,
             @idresa)');
     
-        $reqTrajet->bindValue(':idtrajet', $idtrajet, PDO::PARAM_STR);
-        $reqTrajet->bindValue(':idclient', $idclient, PDO::PARAM_STR);
+        $reqTrajet->bindValue(':idtrajet', $idtrajet, PDO::PARAM_INT);
+        $reqTrajet->bindValue(':idclient', $idclient, PDO::PARAM_INT);
         $reqTrajet->bindValue(':reduction', $reduction, PDO::PARAM_STR);
         $reqTrajet->bindValue(':voiture', $voiture, PDO::PARAM_INT);
         $reqTrajet->bindValue(':place', $place, PDO::PARAM_BOOL);
     
-        $reqTrajet->execute();
+
+        try {
+        $isok = $reqTrajet->execute();
+        } catch(Exception $e) {
+        error_log($e->getMessage());
+        die('Erreur :'.$e->getMessage());
+        }
+
+        error_log((string) $isok);
+        
         $reqTrajet->closeCursor();
 
         #$row = $cnx->query("SELECT @idresa AS idresa")->fetch(PDO::FETCH_ASSOC);
