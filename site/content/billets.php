@@ -106,9 +106,6 @@
     </form>
 </div>
 
-<?php if($_SESSION['info']!='ini'): ?>
-
-
 <?php
     if(!empty($_SESSION['errorsbil'])){
 
@@ -117,9 +114,6 @@
         echo "</p></div>";
     }
 ?>
-
-<?php endif; ?>
-
 
 <h3>Aperçu des billets réservés</h3>
 <div class="flexo">
